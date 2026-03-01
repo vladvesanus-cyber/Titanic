@@ -46,7 +46,7 @@ The pipeline consists of three main stages:
   - Support Vector Machine (SVM)
   - Decision Tree
   - Naive Bayes
-- Automatically selects the **best model** based on validation accuracy (80/20 split)
+- Automatically selects the **best model** based on cross validation
 
 ## 🚀 Getting Started
 
