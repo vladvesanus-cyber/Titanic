@@ -1,0 +1,2 @@
+Клас (Pclass),Стать,Вік,SibSp,Parch,Fare,Embarked,output,timestamp
+1,male,30,0,0,32,S,,2026-06-18 16:18:42.048335
