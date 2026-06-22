@@ -1,3 +1,4 @@
+---
 title: Titanic Survival Predictor
 emoji: 🚢
 colorFrom: blue
@@ -6,6 +7,7 @@ sdk: gradio
 sdk_version: "4.44.0"
 app_file: app.py
 pinned: false
+---
 
 A machine learning project that predicts passenger survival on the Titanic using multiple classification algorithms with automated model selection.
 
