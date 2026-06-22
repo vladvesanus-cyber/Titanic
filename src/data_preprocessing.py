@@ -17,4 +17,22 @@ def basic_preprocessing(train_data, test_data):
     test_data[categorical] = imp_cat.transform(test_data[categorical])
     test_data[categorical] = encoder.transform(test_data[categorical])
 
-    return train_data, test_data
+    preprocessor = {
+        "imp_num": imp_num,
+        "imp_cat": imp_cat,
+        "encoder": encoder,
+        "numerical": numerical,
+        "categorical": categorical
+    }
+
+    return train_data, test_data, preprocessor
+
+def apply_preprocessing(data, preprocessor):
+    numerical = preprocessor["numerical"]
+    categorical = preprocessor["categorical"]
+
+    data[numerical] = preprocessor["imp_num"].transform(data[numerical])
+    data[categorical]= preprocessor["imp_cat"].transform(data[categorical])
+    data[categorical] = preprocessor["encoder"].transform(data[categorical])
+
+    return data

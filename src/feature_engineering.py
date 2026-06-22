@@ -1,7 +1,6 @@
 from sklearn.cluster import KMeans
 
-def feature_engineering(train_data, test_data):
-    def create_feature(X):
+def create_feature(X):
         X['Family'] = X['Parch'] + X['SibSp'] + 1
         X['IsAlone'] = (X['Family']==1).astype(int)
         X['HasCabin']= X['Cabin'].notna().astype(int)
@@ -17,7 +16,8 @@ def feature_engineering(train_data, test_data):
         X.drop(columns=['PassengerId','Name', 'Ticket', 'Cabin'], inplace=True)
 
         return X
-    
+
+def feature_engineering(train_data, test_data):
     train_data = create_feature(train_data)
     test_data = create_feature(test_data)
     
@@ -25,4 +25,9 @@ def feature_engineering(train_data, test_data):
     train_data['Cluster'] = kmeans.fit_predict(train_data)
     test_data['Cluster'] = kmeans.predict(test_data)
 
-    return train_data, test_data
+    return train_data, test_data, kmeans
+
+def apply_feature_engineering(data, kmeans):
+    data = create_feature(data)
+    data['Cluster'] = kmeans.predict(data)
+    return data
