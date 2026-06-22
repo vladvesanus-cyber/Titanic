@@ -1,0 +1,7 @@
+gradio==4.44.0
+scikit-learn
+pandas
+numpy
+category_encoders
+audioop-lts
+huggingface_hub==0.25.2
