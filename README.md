@@ -111,7 +111,6 @@ This opens a local Gradio interface where you can set passenger parameters (clas
 - Extract `Title` from passenger name (`Mr`, `Mrs`, `Miss`, `Master`) as a feature
 - Tune hyperparameters with `GridSearchCV` or `RandomizedSearchCV`
 - Try ensemble methods (stacking, voting classifier)
-- Save the best model using `joblib` for reuse
 
 ## 📄 Dataset
 
