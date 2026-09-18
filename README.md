@@ -9,6 +9,11 @@ app_file: app.py
 pinned: false
 ---
 
+<p align="center">
+  <img src="assets/main.png" width="45%" />
+  <img src="assets/result.png" width="45%" />
+</p>
+
 # 🚢 Titanic Survival Predictor
 
 A machine learning project that predicts Titanic passenger survival using several classification algorithms with automated best-model selection, plus an interactive Gradio app for live predictions.
@@ -111,7 +116,6 @@ This opens a local Gradio interface where you can set passenger parameters (clas
 - Extract `Title` from passenger name (`Mr`, `Mrs`, `Miss`, `Master`) as a feature
 - Tune hyperparameters with `GridSearchCV` or `RandomizedSearchCV`
 - Try ensemble methods (stacking, voting classifier)
-- Save the best model using `joblib` for reuse
 
 ## 📄 Dataset
 
